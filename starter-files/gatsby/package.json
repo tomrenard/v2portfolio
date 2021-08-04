@@ -1,7 +1,7 @@
 {
-  "name": "slicks-slices-frontend",
+  "name": "v2portfolio-frontend",
   "private": true,
-  "description": "Slick Serves the Sweetest Slices",
+  "description": "Personal Portfolio",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
