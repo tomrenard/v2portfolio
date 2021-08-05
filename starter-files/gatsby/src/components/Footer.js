@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <section>
       <div>
-        <a to="https://www.linkedin.com/in/tom-renard-2021/">LINKEDIN</a>
+        <a href="https://www.linkedin.com/in/tom-renard-2021/">LINKEDIN</a>
       </div>
     </section>
   );

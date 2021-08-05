@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const SectionHeaderStyles = styled.header`
   display: flex;
-  margin: 0 1rem;
+  margin: 3rem 1rem;
   align-items: center;
   justify-content: flex-start;
   width: 100%;
