@@ -1,12 +1,13 @@
 import { graphql } from 'gatsby';
 import React from 'react';
+import Header from '../components/Header';
 
 export default function index({ data }) {
   const { projects } = data;
   return (
-    <div>
-      <p>Hello Portfolio {projects.edges[0].node.name}</p>
-    </div>
+    <>
+      <Header />
+    </>
   );
 }
 
