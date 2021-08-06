@@ -1,3 +1,4 @@
+import { Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -26,7 +27,8 @@ const TitleHeaderStyles = styled.div`
 const LinkHeaderStyles = styled.div`
   display: flex;
   justify-content: space-between;
-  p {
+  p,
+  a {
     text-transform: uppercase;
   }
 `;
@@ -41,7 +43,7 @@ export default function Header() {
         </h1>
       </TitleHeaderStyles>
       <LinkHeaderStyles>
-        <p>About</p>
+        <Link to="/about">About</Link>
         <p>Resume</p>
       </LinkHeaderStyles>
     </SectionHeaderStyles>
