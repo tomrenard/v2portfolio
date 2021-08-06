@@ -6,6 +6,7 @@ const SectionHeaderStyles = styled.header`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  max-height: 98vh;
 `;
 
 const TitleHeaderStyles = styled.div`
@@ -13,10 +14,11 @@ const TitleHeaderStyles = styled.div`
   align-items: center;
   justify-content: center;
   h1 {
-    font-size: 20vw;
+    font-size: 23vw;
     font-weight: 100;
     text-transform: uppercase;
     display: flex;
+    padding: 4rem 0;
     flex-direction: column;
   }
 `;

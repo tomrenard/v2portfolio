@@ -6,8 +6,6 @@ const FooterStyles = styled.footer`
   display: flex;
   justify-content: space-between;
   margin: 1rem;
-  .social 
-  }
   ul {
     padding: 0;
   }
