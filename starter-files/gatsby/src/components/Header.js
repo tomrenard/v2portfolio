@@ -2,29 +2,46 @@ import React from 'react';
 import styled from 'styled-components';
 
 const SectionHeaderStyles = styled.header`
+  margin: 1rem;
   display: flex;
-  margin: 3rem 1rem;
+  flex-direction: column;
+  justify-content: space-around;
+`;
+
+const TitleHeaderStyles = styled.div`
+  display: flex;
   align-items: center;
-  justify-content: flex-start;
-  width: 100%;
+  justify-content: center;
   h1 {
-    font-size: 10rem;
+    font-size: 20vw;
     font-weight: 100;
     text-transform: uppercase;
     display: flex;
     flex-direction: column;
-    width: 100%;
-    line-height: 0.8;
+  }
+`;
+
+const LinkHeaderStyles = styled.div`
+  display: flex;
+  justify-content: space-between;
+  p {
+    text-transform: uppercase;
   }
 `;
 
 export default function Header() {
   return (
     <SectionHeaderStyles>
-      <h1>
-        <span>Front-end</span>
-        <span>Developer</span>
-      </h1>
+      <TitleHeaderStyles>
+        <h1>
+          <span>Front-End</span>
+          <span>Developer</span>
+        </h1>
+      </TitleHeaderStyles>
+      <LinkHeaderStyles>
+        <p>About</p>
+        <p>Resume</p>
+      </LinkHeaderStyles>
     </SectionHeaderStyles>
   );
 }

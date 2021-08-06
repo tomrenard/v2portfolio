@@ -1,10 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
 
-import font from '../assets/fonts/Sentient-Extralight.woff';
+import font from '../assets/fonts/Livia-Medium.woff';
 
 const Typography = createGlobalStyle`
 @font-face {
-  font-family: 'Sentient-Extralight';
+  font-family: 'Livia-Medium';
   src: url(${font}) format('woff');
 }
   html {
@@ -24,7 +24,7 @@ const Typography = createGlobalStyle`
     text-decoration-skip-ink: none;
   }
   h1, h2 {
-    font-family: 'Sentient-Extralight';
+    font-family: 'Livia-Medium';
     font-weight: 100;
   }
 `;
