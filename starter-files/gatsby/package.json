@@ -1,7 +1,7 @@
 {
   "name": "v2portfolio-frontend",
   "private": true,
-  "description": "Personal Portfolio",
+  "description": "Personal Web Development Portfolio",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
