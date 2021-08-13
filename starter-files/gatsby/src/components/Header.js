@@ -1,25 +1,36 @@
-import { Link } from 'gatsby';
+import { graphql, Link, useStaticQuery } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
+import Typewriter from 'typewriter-effect';
+// import Img from 'gatsby-image';
 
 const SectionHeaderStyles = styled.header`
-  margin: 1rem;
+  margin: 2rem 4rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   max-height: 98vh;
+  .Typewriter__cursor {
+    color: var(--beige);
+  }
+  p {
+    font-size: 1.3rem;
+    font-weight: 300;
+  }
 `;
 
 const TitleHeaderStyles = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  margin-top: 4rem;
   h1 {
     font-size: 23vw;
+    line-height: 0.7;
     font-weight: 100;
     text-transform: uppercase;
     display: flex;
-    padding: 4rem 0;
+    text-align: left;
     flex-direction: column;
   }
 `;
@@ -34,18 +45,43 @@ const LinkHeaderStyles = styled.div`
 `;
 
 export default function Header() {
+  const data = useStaticQuery(graphql`
+    query Header {
+      profilePic: sanityAsset(title: { eq: "Profile picture" }) {
+        title
+        headercontent
+        image {
+          asset {
+            fluid(maxWidth: 800) {
+              ...GatsbySanityImageFluid
+            }
+          }
+        }
+      }
+    }
+  `);
+  const { profilePic } = data;
+  console.log(profilePic);
   return (
     <SectionHeaderStyles>
       <TitleHeaderStyles>
         <h1>
-          <span>Front-End</span>
-          <span>Developer</span>
+          <span>I am a</span>
+          <span>
+            <Typewriter
+              options={{
+                strings: ['DEVELOPER'],
+                autoStart: true,
+                loop: true,
+              }}
+            />
+          </span>
         </h1>
       </TitleHeaderStyles>
-      <LinkHeaderStyles>
-        <Link to="/about">About</Link>
-        <p>Resume</p>
-      </LinkHeaderStyles>
+      <div className="img-container">
+        {/* <Img fluid={profilePic.image.asset.fluid} alt={profilePic.Title} /> */}
+      </div>
+      <p>{profilePic.headercontent}</p>
     </SectionHeaderStyles>
   );
 }
