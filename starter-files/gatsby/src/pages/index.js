@@ -7,11 +7,11 @@ import Projects from '../components/Projects';
 export default function index({ data }) {
   const { projects } = data;
   return (
-    <div>
+    <>
       <Cursor />
       <Header />
       <Projects />
-    </div>
+    </>
   );
 }
 

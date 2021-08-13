@@ -1,7 +1,7 @@
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
-import Typewriter from 'typewriter-effect';
+// import Typewriter from 'typewriter-effect';
 // import Img from 'gatsby-image';
 
 const SectionHeaderStyles = styled.header`
@@ -67,15 +67,7 @@ export default function Header() {
       <TitleHeaderStyles>
         <h1>
           <span>I am a</span>
-          <span>
-            <Typewriter
-              options={{
-                strings: ['DEVELOPER'],
-                autoStart: true,
-                loop: true,
-              }}
-            />
-          </span>
+          <span>Developer</span>
         </h1>
       </TitleHeaderStyles>
       <div className="img-container">

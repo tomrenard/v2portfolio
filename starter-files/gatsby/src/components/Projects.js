@@ -11,18 +11,18 @@ const SectionProjectsStyles = styled.section`
     white-space: nowrap;
     overflow: hidden;
     display: inline-block;
-    animation: scroll 10s linear infinite;
+    animation: scroll 15s linear infinite;
   }
   @keyframes scroll {
     0% {
       transform: translate3d(-100%, 0, 0);
     }
     100% {
-      transform: translate3d(180%, 0, 0);
+      transform: translate3d(120%, 0, 0);
     }
   }
   h1 {
-    font-size: 10rem;
+    font-size: 23vw;
   }
 `;
 
