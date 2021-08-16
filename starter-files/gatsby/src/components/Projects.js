@@ -11,7 +11,7 @@ const SectionProjectsStyles = styled.section`
     white-space: nowrap;
     overflow: hidden;
     display: inline-block;
-    animation: scroll 15s linear infinite;
+    animation: scroll 12s linear infinite;
   }
   @keyframes scroll {
     0% {
