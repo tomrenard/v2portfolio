@@ -1,7 +1,6 @@
 import { Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
-import Cursor from './Cursor';
 
 const FooterStyles = styled.footer`
   display: flex;
@@ -19,7 +18,6 @@ const FooterStyles = styled.footer`
 export default function Footer() {
   return (
     <>
-      <Cursor />
       <FooterStyles>
         <div className="social">
           <ul>

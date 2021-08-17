@@ -10,19 +10,16 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     max-width: 100%;
     overflow-x: hidden;
-    cursor: none;
+    /* cursor: none; */
   }
 
-  * {
+  /* * {
     cursor: none;
-  }
+  } */
 
-  a {
+  /* a {
     cursor: none;
-    &hover {
-      color: var(--beige);
-    }
-  }
+  } */
 
   h1,h2,h3,h4,h5 {
     margin: 0;
@@ -41,10 +38,9 @@ const GlobalStyles = createGlobalStyle`
     background-color: black;
     transition: background-color 400ms;
     &.hovered {
-      background-color: var(--beige);
-      z-index: -1000;
-      width: 0.8rem;
-      height: 0.8rem;
+      background-color: transparent;
+      width: 1rem;
+      height: 1rem;
     }
   }
 `;

@@ -8,8 +8,8 @@ export default function index({ data }) {
   const { projects } = data;
   return (
     <>
+      {/* <Cursor /> */}
       <Header />
-      <Cursor />
       <Projects projects={projects} />
     </>
   );
