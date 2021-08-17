@@ -7,40 +7,33 @@ import styled from 'styled-components';
 const SectionHeaderStyles = styled.header`
   margin: 2rem 4rem;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   max-height: 98vh;
+  max-width: 1200px;
+  overflow: hidden;
   .Typewriter__cursor {
     color: var(--beige);
-  }
-  p {
-    font-size: 1.3rem;
-    font-weight: 300;
   }
 `;
 
 const TitleHeaderStyles = styled.div`
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   margin-top: 4rem;
+  flex-direction: column;
   h1 {
-    font-size: 23vw;
+    font-size: 13rem;
     line-height: 0.7;
     font-weight: 100;
     text-transform: uppercase;
     display: flex;
-    text-align: left;
     flex-direction: column;
   }
-`;
-
-const LinkHeaderStyles = styled.div`
-  display: flex;
-  justify-content: space-between;
-  p,
-  a {
-    text-transform: uppercase;
+  p {
+    font-size: 1.3rem;
+    font-weight: 300;
+    text-align: left;
   }
 `;
 
@@ -66,14 +59,11 @@ export default function Header() {
     <SectionHeaderStyles>
       <TitleHeaderStyles>
         <h1>
-          <span>I am a</span>
+          <span>Front-End</span>
           <span>Developer</span>
         </h1>
+        <p>{profilePic.headercontent}</p>
       </TitleHeaderStyles>
-      <div className="img-container">
-        {/* <Img fluid={profilePic.image.asset.fluid} alt={profilePic.Title} /> */}
-      </div>
-      <p>{profilePic.headercontent}</p>
     </SectionHeaderStyles>
   );
 }
