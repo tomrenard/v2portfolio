@@ -13,6 +13,9 @@ const FooterStyles = styled.footer`
     display: inline-block;
     padding-right: 1rem;
   }
+  p {
+    font-weight: 500;
+  }
 `;
 
 export default function Footer() {

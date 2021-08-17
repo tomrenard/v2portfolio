@@ -15,8 +15,12 @@ const Typography = createGlobalStyle`
     background: var(--beige);
     font-size: 1rem;
   }
-  p, li {
+  p, li, h3, h4, h5, h6 {
     letter-spacing: 0.5px;
+  }
+
+  p {
+    font-weight: 300;
   }
   a {
     color: black;

@@ -31,9 +31,8 @@ const TitleHeaderStyles = styled.div`
     flex-direction: column;
   }
   p {
-    font-size: 1.3rem;
-    font-weight: 300;
     text-align: left;
+    font-size: 1.3rem;
   }
 `;
 

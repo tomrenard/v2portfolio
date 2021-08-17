@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
 
-const TitleProjectsStyles = styled.section`
+const TitleProjectsStyles = styled.div`
   margin: 6rem 0;
   .port-cont {
     max-width: 100%;
@@ -28,16 +28,18 @@ const TitleProjectsStyles = styled.section`
 `;
 
 const ProjectsStyles = styled.div`
-  display: flex;
+  margin: 2rem 4rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 2rem;
   .img-project-container {
     width: 100%;
   }
 `;
 
 export default function Projects({ projects }) {
-  console.log(projects);
   return (
-    <section>
+    <>
       <TitleProjectsStyles>
         <div className="port-cont">
           <div className="scroll">
@@ -46,8 +48,8 @@ export default function Projects({ projects }) {
         </div>
       </TitleProjectsStyles>
       <div>
-        {projects.nodes.map((project) => (
-          <ProjectsStyles>
+        {projects.nodes.map((project, i) => (
+          <ProjectsStyles key={`projects-${i}`}>
             <div className="img-project-container">
               <Img fluid={project.image.asset.fluid} alt={project.name} />
             </div>
@@ -58,6 +60,6 @@ export default function Projects({ projects }) {
           </ProjectsStyles>
         ))}
       </div>
-    </section>
+    </>
   );
 }
