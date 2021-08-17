@@ -8,9 +8,9 @@ export default function index({ data }) {
   const { projects } = data;
   return (
     <>
-      <Cursor />
       <Header />
-      <Projects />
+      <Cursor />
+      <Projects projects={projects} />
     </>
   );
 }
@@ -18,9 +18,15 @@ export default function index({ data }) {
 export const query = graphql`
   query ProjectQuery {
     projects: allSanityProject {
-      edges {
-        node {
-          name
+      nodes {
+        name
+        description
+        image {
+          asset {
+            fluid(maxWidth: 800) {
+              ...GatsbySanityImageFluid
+            }
+          }
         }
       }
     }

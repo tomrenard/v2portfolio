@@ -11,9 +11,9 @@ const SectionHeaderStyles = styled.header`
   max-height: 98vh;
   max-width: 1200px;
   overflow: hidden;
-  .Typewriter__cursor {
+  /* .Typewriter__cursor {
     color: var(--beige);
-  }
+  } */
 `;
 
 const TitleHeaderStyles = styled.div`
@@ -54,7 +54,6 @@ export default function Header() {
     }
   `);
   const { profilePic } = data;
-  console.log(profilePic);
   return (
     <SectionHeaderStyles>
       <TitleHeaderStyles>

@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import Img from 'gatsby-image';
 
-const SectionProjectsStyles = styled.section`
+const TitleProjectsStyles = styled.section`
   margin: 6rem 0;
   .port-cont {
     max-width: 100%;
@@ -26,14 +27,37 @@ const SectionProjectsStyles = styled.section`
   }
 `;
 
-export default function Projects() {
+const ProjectsStyles = styled.div`
+  display: flex;
+  .img-project-container {
+    width: 100%;
+  }
+`;
+
+export default function Projects({ projects }) {
+  console.log(projects);
   return (
-    <SectionProjectsStyles>
-      <div className="port-cont">
-        <div className="scroll">
-          <h1>PORTFOLIO</h1>
+    <section>
+      <TitleProjectsStyles>
+        <div className="port-cont">
+          <div className="scroll">
+            <h1>PORTFOLIO</h1>
+          </div>
         </div>
+      </TitleProjectsStyles>
+      <div>
+        {projects.nodes.map((project) => (
+          <ProjectsStyles>
+            <div className="img-project-container">
+              <Img fluid={project.image.asset.fluid} alt={project.name} />
+            </div>
+            <div>
+              <h3>{project.name}</h3>
+              <p>{project.description}</p>
+            </div>
+          </ProjectsStyles>
+        ))}
       </div>
-    </SectionProjectsStyles>
+    </section>
   );
 }

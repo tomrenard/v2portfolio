@@ -25,7 +25,6 @@ const Cursor = () => {
 
     addHoverEvents();
     addEventListeners();
-    console.log(hovered);
     return () => removeEventListeners();
   });
 
