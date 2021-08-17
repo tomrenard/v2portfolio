@@ -50,10 +50,19 @@ export default function Projects({ projects }) {
       <div>
         {projects.nodes.map((project, i) => (
           <ProjectsStyles key={`projects-${i}`}>
-            <div className="img-project-container">
+            <div
+              data-sal="slide-right"
+              data-sal-duration="800"
+              data-sal-delay="800"
+              className="img-project-container"
+            >
               <Img fluid={project.image.asset.fluid} alt={project.name} />
             </div>
-            <div>
+            <div
+              data-sal="slide-left"
+              data-sal-duration="800"
+              data-sal-delay="800"
+            >
               <h3>{project.name}</h3>
               <p>{project.description}</p>
             </div>
