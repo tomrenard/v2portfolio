@@ -8,22 +8,20 @@ const SectionHeaderStyles = styled.header`
   margin: 2rem 4rem;
   display: flex;
   justify-content: center;
-  max-height: 98vh;
-  max-width: 1200px;
-  overflow: hidden;
   /* .Typewriter__cursor {
     color: var(--beige);
   } */
 `;
 
 const TitleHeaderStyles = styled.div`
+  max-width: 1100px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 4rem;
   flex-direction: column;
   h1 {
-    font-size: 13rem;
+    font-size: 18rem;
     line-height: 0.7;
     font-weight: 100;
     text-transform: uppercase;
@@ -56,11 +54,13 @@ export default function Header() {
   return (
     <SectionHeaderStyles>
       <TitleHeaderStyles>
-        <h1>
+        <h1 data-sal="fade" data-sal-duration="800" data-sal-delay="800">
           <span>Front-End</span>
           <span>Developer</span>
         </h1>
-        <p>{profilePic.headercontent}</p>
+        <p data-sal="fade" data-sal-duration="800" data-sal-delay="900">
+          {profilePic.headercontent}
+        </p>
       </TitleHeaderStyles>
     </SectionHeaderStyles>
   );
