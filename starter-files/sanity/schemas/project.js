@@ -9,5 +9,18 @@ export default {
       type: 'string',
       description: 'Name of the project',
     },
+    {
+      name: 'image',
+      title: 'Asset',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    },
+    {
+      name: 'description',
+      title: 'Project Description',
+      type: 'text',
+    },
   ],
 };

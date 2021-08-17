@@ -1,6 +1,7 @@
 import { Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
+import Cursor from './Cursor';
 
 const FooterStyles = styled.footer`
   display: flex;
@@ -17,20 +18,25 @@ const FooterStyles = styled.footer`
 
 export default function Footer() {
   return (
-    <FooterStyles>
-      <div className="social">
-        <ul>
-          <li>
-            <a href="https://www.linkedin.com/in/tom-renard-2021/">LINKEDIN</a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/tom-renard-2021/">GITHUB</a>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <p>CODED BY &copy; TOM RENARD {new Date().getFullYear()} </p>
-      </div>
-    </FooterStyles>
+    <>
+      <Cursor />
+      <FooterStyles>
+        <div className="social">
+          <ul>
+            <li>
+              <a href="https://www.linkedin.com/in/tom-renard-2021/">
+                LINKEDIN
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/tom-renard-2021/">GITHUB</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <p>CODED BY &copy; TOM RENARD {new Date().getFullYear()} </p>
+        </div>
+      </FooterStyles>
+    </>
   );
 }

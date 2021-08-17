@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const Cursor = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [hovered, setHovered] = useState(false);
 
   useEffect(() => {
     const mMove = (el) => {
@@ -15,13 +16,22 @@ const Cursor = () => {
       document.removeEventListener('mousemove', mMove);
     };
 
+    const addHoverEvents = () => {
+      document.querySelectorAll('a').forEach((el) => {
+        el.addEventListener('mouseover', () => setHovered(true));
+        el.addEventListener('mouseout', () => setHovered(false));
+      });
+    };
+
+    addHoverEvents();
     addEventListeners();
+    console.log(hovered);
     return () => removeEventListeners();
-  }, []);
+  });
 
   return (
     <div
-      className="cursor"
+      className={hovered ? 'cursor hovered' : 'cursor'}
       style={{
         left: `${position.x}px`,
         top: `${position.y}px`,
