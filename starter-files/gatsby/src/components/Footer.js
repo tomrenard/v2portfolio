@@ -5,7 +5,6 @@ import styled from 'styled-components';
 const FooterStyles = styled.footer`
   display: flex;
   justify-content: space-between;
-  margin: 1rem;
   ul {
     padding: 0;
   }

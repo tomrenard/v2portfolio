@@ -1,29 +1,30 @@
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
+import Nav from './Nav';
+import NavFooter from './NavFooter';
 // import Typewriter from 'typewriter-effect';
 // import Img from 'gatsby-image';
 
 const SectionHeaderStyles = styled.header`
-  margin: 2rem 4rem;
-  display: flex;
-  justify-content: center;
-  /* .Typewriter__cursor {
-    color: var(--beige);
-  } */
+  height: 99vh;
+  border: 1px solid red;
+  .header-container {
+    height: 100%;
+    border: 1px solid green;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 `;
 
 const TitleHeaderStyles = styled.div`
-  max-width: 1100px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 4rem;
-  flex-direction: column;
   h1 {
-    font-size: 18rem;
+    font-size: 25vw;
     line-height: 0.7;
     font-weight: 100;
+    margin: auto;
     text-transform: uppercase;
     display: flex;
     flex-direction: column;
@@ -53,15 +54,19 @@ export default function Header() {
   const { profilePic } = data;
   return (
     <SectionHeaderStyles>
-      <TitleHeaderStyles>
-        <h1 data-sal="fade" data-sal-duration="800" data-sal-delay="800">
-          <span>Front-End</span>
-          <span>Developer</span>
-        </h1>
-        <p data-sal="fade" data-sal-duration="800" data-sal-delay="900">
+      <div className="header-container">
+        <Nav />
+        <TitleHeaderStyles>
+          <h1 data-sal="fade" data-sal-duration="800" data-sal-delay="800">
+            <span>Front-End</span>
+            <span>Developer</span>
+          </h1>
+          {/* <p data-sal="fade" data-sal-duration="800" data-sal-delay="900">
           {profilePic.headercontent}
-        </p>
-      </TitleHeaderStyles>
+        </p> */}
+        </TitleHeaderStyles>
+        <NavFooter />
+      </div>
     </SectionHeaderStyles>
   );
 }
