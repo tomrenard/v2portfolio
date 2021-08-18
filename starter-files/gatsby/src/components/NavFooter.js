@@ -4,6 +4,9 @@ import styled from 'styled-components';
 const FooterStyles = styled.footer`
   display: flex;
   justify-content: space-between;
+  p {
+    font-weight: 500;
+  }
 `;
 
 export default function NavFooter() {
@@ -11,7 +14,7 @@ export default function NavFooter() {
     <>
       <FooterStyles>
         <div>
-          <p>MODE</p>
+          <p>ABOUT</p>
         </div>
         <div>
           <p>SCROLL</p>

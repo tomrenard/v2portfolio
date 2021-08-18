@@ -1,4 +1,3 @@
-import { graphql, Link, useStaticQuery } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
 import Nav from './Nav';
@@ -7,11 +6,11 @@ import NavFooter from './NavFooter';
 // import Img from 'gatsby-image';
 
 const SectionHeaderStyles = styled.header`
-  height: 99vh;
-  border: 1px solid red;
+  height: 100vh;
+  border: 2px solid red;
   .header-container {
+    width: 100%;
     height: 100%;
-    border: 1px solid green;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -21,7 +20,7 @@ const SectionHeaderStyles = styled.header`
 const TitleHeaderStyles = styled.div`
   display: flex;
   h1 {
-    font-size: 25vw;
+    font-size: 22vw;
     line-height: 0.7;
     font-weight: 100;
     margin: auto;
@@ -36,22 +35,6 @@ const TitleHeaderStyles = styled.div`
 `;
 
 export default function Header() {
-  const data = useStaticQuery(graphql`
-    query Header {
-      profilePic: sanityAsset(title: { eq: "Profile picture" }) {
-        title
-        headercontent
-        image {
-          asset {
-            fluid(maxWidth: 800) {
-              ...GatsbySanityImageFluid
-            }
-          }
-        }
-      }
-    }
-  `);
-  const { profilePic } = data;
   return (
     <SectionHeaderStyles>
       <div className="header-container">
@@ -61,9 +44,6 @@ export default function Header() {
             <span>Front-End</span>
             <span>Developer</span>
           </h1>
-          {/* <p data-sal="fade" data-sal-duration="800" data-sal-delay="900">
-          {profilePic.headercontent}
-        </p> */}
         </TitleHeaderStyles>
         <NavFooter />
       </div>
