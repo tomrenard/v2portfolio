@@ -7,7 +7,6 @@ import NavFooter from './NavFooter';
 
 const SectionHeaderStyles = styled.header`
   height: 100vh;
-  border: 2px solid red;
   .header-container {
     width: 100%;
     height: 100%;

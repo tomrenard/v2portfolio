@@ -6,6 +6,7 @@ const FooterStyles = styled.footer`
   justify-content: space-between;
   p {
     font-weight: 500;
+    margin: 1rem;
   }
 `;
 

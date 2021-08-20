@@ -5,10 +5,22 @@ import { GiBeveledStar } from 'react-icons/gi';
 const SectionHPStyles = styled.section`
   height: 100vh;
   border: 2px solid purple;
+  .intro-content-container {
+    display: flex;
+    justify-content: center;
+  }
+  .intro-content {
+    margin: 4rem 2rem;
+    max-width: 500px;
+    p {
+      text-transform: uppercase;
+    }
+  }
 `;
 
 const TitleProjectsStyles = styled.div`
   .port-cont {
+    margin-top: 10rem;
     max-width: 100%;
     overflow: hidden;
   }
@@ -34,7 +46,15 @@ const TitleProjectsStyles = styled.div`
 export default function HeaderProjects({ info }) {
   return (
     <SectionHPStyles>
-      <GiBeveledStar />
+      <div
+        style={{ display: 'flex', justifyContent: 'center', marginTop: '4rem' }}
+      >
+        <GiBeveledStar
+          style={{
+            fontSize: '3rem',
+          }}
+        />
+      </div>
       <TitleProjectsStyles>
         <div className="port-cont">
           <div className="scroll">
@@ -42,9 +62,13 @@ export default function HeaderProjects({ info }) {
           </div>
         </div>
       </TitleProjectsStyles>
-      <p data-sal="fade" data-sal-duration="800" data-sal-delay="900">
-        {info.headercontent}
-      </p>
+      <div className="intro-content-container">
+        <div className="intro-content">
+          <p data-sal="fade" data-sal-duration="800" data-sal-delay="900">
+            {info.headercontent}
+          </p>
+        </div>
+      </div>
     </SectionHPStyles>
   );
 }
