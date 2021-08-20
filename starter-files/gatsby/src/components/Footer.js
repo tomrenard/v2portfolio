@@ -4,6 +4,9 @@ import styled from 'styled-components';
 const FooterStyles = styled.footer`
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin: 1rem;
+  position: relative;
   ul {
     padding: 0;
   }
@@ -29,6 +32,9 @@ export default function Footer() {
             </li>
             <li>
               <a href="https://www.linkedin.com/in/tom-renard-2021/">GITHUB</a>
+            </li>
+            <li>
+              <p>RESUME</p>
             </li>
           </ul>
         </div>
