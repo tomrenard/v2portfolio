@@ -17,7 +17,7 @@ const ProjectsStyles = styled.div`
 
 export default function Projects({ projects }) {
   return (
-    <SectionProjectStyles>
+    <SectionProjectStyles className="projects">
       <div>
         {projects.nodes.map((project, i) => (
           <ProjectsStyles key={`projects-${i}`}>

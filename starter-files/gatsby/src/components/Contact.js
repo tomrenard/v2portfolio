@@ -50,7 +50,7 @@ const TitleContactStyles = styled.div`
 export default function Contact({ scrollY }) {
   return (
     <>
-      <SectionContactStyles>
+      <SectionContactStyles className="contact">
         <div
           style={{
             display: 'flex',

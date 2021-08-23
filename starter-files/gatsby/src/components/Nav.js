@@ -1,22 +1,23 @@
 import { Link } from 'gatsby';
+import scrollTo from 'gatsby-plugin-smoothscroll';
 import React from 'react';
 import styled from 'styled-components';
 
 const NavStyles = styled.nav`
-  margin: 1rem;
   display: flex;
   justify-content: space-between;
-  .menu a {
-    padding-left: 1rem;
-  }
 `;
 
 export default function Nav() {
   return (
     <NavStyles>
-      <Link to="/">TOM RENARD</Link>
+      <button type="button" onClick={() => scrollTo('.home')}>
+        TOM RENARD
+      </button>
       <div className="menu">
-        <Link to="/contact">CONTACT</Link>
+        <button type="button" onClick={() => scrollTo('.contact')}>
+          CONTACT
+        </button>
       </div>
     </NavStyles>
   );

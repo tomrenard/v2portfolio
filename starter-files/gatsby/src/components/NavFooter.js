@@ -1,13 +1,10 @@
+import scrollTo from 'gatsby-plugin-smoothscroll';
 import React from 'react';
 import styled from 'styled-components';
 
 const FooterStyles = styled.footer`
   display: flex;
   justify-content: space-between;
-  p {
-    font-weight: 500;
-    margin: 1rem;
-  }
 `;
 
 export default function NavFooter() {
@@ -15,10 +12,14 @@ export default function NavFooter() {
     <>
       <FooterStyles>
         <div>
-          <p>ABOUT</p>
+          <button type="button" onClick={() => scrollTo('.about')}>
+            ABOUT
+          </button>
         </div>
         <div>
-          <p>PROJECTS</p>
+          <button type="button" onClick={() => scrollTo('.projects')}>
+            PROJECTS
+          </button>
         </div>
       </FooterStyles>
     </>

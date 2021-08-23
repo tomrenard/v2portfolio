@@ -11,6 +11,7 @@ export default {
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
+    'gatsby-plugin-smoothscroll',
     {
       resolve: 'gatsby-source-sanity',
       options: {

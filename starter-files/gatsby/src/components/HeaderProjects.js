@@ -49,7 +49,7 @@ const TitleProjectsStyles = styled.div`
 
 export default function HeaderProjects({ info, scrollY }) {
   return (
-    <SectionHPStyles>
+    <SectionHPStyles className="about">
       <div
         style={{ display: 'flex', justifyContent: 'center', marginTop: '4rem' }}
       >

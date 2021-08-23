@@ -20,6 +20,12 @@ const GlobalStyles = createGlobalStyle`
   /* a {
     cursor: none;
   } */
+  button {
+    background: none;
+    border-style: none;
+    font-size: 1rem;
+    margin: 1rem;
+  }
 
   h1,h2,h3,h4,h5 {
     margin: 0;

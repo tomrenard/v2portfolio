@@ -35,7 +35,7 @@ const TitleHeaderStyles = styled.div`
 
 export default function Header() {
   return (
-    <SectionHeaderStyles>
+    <SectionHeaderStyles className="home">
       <div className="header-container">
         <Nav />
         <TitleHeaderStyles>
