@@ -10,12 +10,14 @@ const SectionStylesNav = styled.section`
 
 const NavStyles = styled.nav`
   position: fixed;
+  height: 4rem;
   top: 0px;
   left: 0px;
   right: 0px;
   z-index: 100;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   &.scrolled {
     background: var(--beige);
   }
