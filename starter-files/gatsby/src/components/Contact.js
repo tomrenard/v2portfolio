@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import { GiBeveledStar } from 'react-icons/gi';
 import Footer from './Footer';
+import Icone from './Icone';
 
 const SectionContactStyles = styled.section`
-  height: 94vh;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -47,7 +47,7 @@ const TitleContactStyles = styled.div`
   }
 `;
 
-export default function Contact() {
+export default function Contact({ scrollY }) {
   return (
     <>
       <SectionContactStyles>
@@ -58,11 +58,7 @@ export default function Contact() {
             marginTop: '4rem',
           }}
         >
-          <GiBeveledStar
-            style={{
-              fontSize: '3rem',
-            }}
-          />
+          <Icone scrollY={scrollY} />
         </div>
         <TitleContactStyles>
           <div className="title-cont">

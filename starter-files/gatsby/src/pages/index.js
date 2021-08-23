@@ -1,25 +1,34 @@
 import { graphql } from 'gatsby';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Contact from '../components/Contact';
-import Cursor from '../components/Cursor';
-import Footer from '../components/Footer';
 import Header from '../components/Header';
 import HeaderProjects from '../components/HeaderProjects';
 import Projects from '../components/Projects';
 import GlobalStyles from '../styles/GlobalStyles';
 import Typography from '../styles/Typography';
 
-export default function index({ data }) {
+export default function Index({ data }) {
   const { projects, profilePic } = data;
+  const [scrollY, setScrollY] = useState(0);
+  useEffect(() => {
+    const mScroll = () => {
+      const posY = window.scrollY;
+      setScrollY(posY);
+    };
+    const addScrollListener = () => {
+      window.addEventListener('scroll', mScroll);
+    };
+    addScrollListener();
+  });
   return (
     <>
       <GlobalStyles />
       <Typography />
       <>
         <Header />
-        <HeaderProjects info={profilePic} />
+        <HeaderProjects scrollY={scrollY} info={profilePic} />
         <Projects projects={projects} />
-        <Contact />
+        <Contact scrollY={scrollY} />
       </>
     </>
   );

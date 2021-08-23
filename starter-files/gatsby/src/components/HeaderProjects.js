@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { GiBeveledStar } from 'react-icons/gi';
+import Icone from './Icone';
 
 const SectionHPStyles = styled.section`
   height: 100vh;
@@ -47,17 +48,13 @@ const TitleProjectsStyles = styled.div`
   }
 `;
 
-export default function HeaderProjects({ info }) {
+export default function HeaderProjects({ info, scrollY }) {
   return (
     <SectionHPStyles>
       <div
         style={{ display: 'flex', justifyContent: 'center', marginTop: '4rem' }}
       >
-        <GiBeveledStar
-          style={{
-            fontSize: '3rem',
-          }}
-        />
+        <Icone scrollY={scrollY} />
       </div>
       <TitleProjectsStyles>
         <div className="port-cont">
