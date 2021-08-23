@@ -43,6 +43,7 @@ export const query = graphql`
     profilePic: sanityAsset(title: { eq: "Profile picture" }) {
       title
       headercontent
+      stack
       image {
         asset {
           fluid(maxWidth: 800) {

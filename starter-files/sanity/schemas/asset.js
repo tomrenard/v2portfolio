@@ -22,5 +22,10 @@ export default {
       title: 'Header Content',
       type: 'text',
     },
+    {
+      name: 'stack',
+      title: 'Current Stack',
+      type: 'text',
+    },
   ],
 };

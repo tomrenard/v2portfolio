@@ -4,7 +4,6 @@ import { GiBeveledStar } from 'react-icons/gi';
 
 const SectionHPStyles = styled.section`
   height: 100vh;
-  border: 2px solid purple;
   .intro-content-container {
     display: flex;
     justify-content: center;
