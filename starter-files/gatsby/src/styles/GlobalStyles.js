@@ -25,6 +25,7 @@ const GlobalStyles = createGlobalStyle`
     border-style: none;
     font-size: 1rem;
     margin: 1rem;
+    cursor: pointer;
   }
 
   h1,h2,h3,h4,h5 {

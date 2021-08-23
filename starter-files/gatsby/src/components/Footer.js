@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import resume from '../ressources/CV-Tom-Renard.pdf';
 
 const FooterStyles = styled.footer`
   display: flex;
@@ -30,15 +31,27 @@ export default function Footer() {
         <div className="social">
           <ul>
             <li>
-              <a href="https://www.linkedin.com/in/tom-renard-2021/">
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/tom-renard-2021/"
+                rel="noreferrer"
+              >
                 LINKEDIN
               </a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/tom-renard-2021/">GITHUB</a>
+              <a
+                target="_blank"
+                href="https://github.com/tomrenard"
+                rel="noreferrer"
+              >
+                GITHUB
+              </a>
             </li>
             <li>
-              <p>RESUME</p>
+              <a target="_blank" href={resume} rel="noreferrer">
+                RESUME
+              </a>
             </li>
           </ul>
         </div>
