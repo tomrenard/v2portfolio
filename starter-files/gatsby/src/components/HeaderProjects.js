@@ -11,6 +11,9 @@ const SectionHPStyles = styled.section`
   .intro-content-container {
     display: flex;
     justify-content: center;
+    @media (max-width: 800px) {
+      margin: 0 1rem;
+    }
   }
   .intro-content {
     max-width: 500px;
@@ -65,9 +68,7 @@ export default function HeaderProjects({ info }) {
       </TitleProjectsStyles>
       <div className="intro-content-container">
         <div className="intro-content">
-          <p data-sal="fade" data-sal-duration="800" data-sal-delay="900">
-            {info.headercontent}
-          </p>
+          <p>{info.headercontent}</p>
           <p>{info.stack}</p>
         </div>
       </div>

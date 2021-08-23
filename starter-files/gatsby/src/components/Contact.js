@@ -4,13 +4,16 @@ import { GiBeveledStar } from 'react-icons/gi';
 import Footer from './Footer';
 
 const SectionContactStyles = styled.section`
-  height: 100vh;
+  height: 94vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   .contact-container {
     display: flex;
     justify-content: center;
+    @media (max-width: 800px) {
+      margin: 0 1rem;
+    }
   }
   .contact-content {
     max-width: 500px;
@@ -70,7 +73,7 @@ export default function Contact() {
         </TitleContactStyles>
         <div className="contact-container">
           <div className="contact-content">
-            <p data-sal="fade" data-sal-duration="800" data-sal-delay="900">
+            <p>
               If you have a freelance project enquiry or if your company is
               interested in my profile, feel free to send me an email -
               <span style={{ textTransform: 'lowercase' }}>

@@ -8,6 +8,9 @@ const FooterStyles = styled.footer`
   margin-left: 1rem;
   margin-right: 1rem;
   position: relative;
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
   ul {
     padding: 0;
   }

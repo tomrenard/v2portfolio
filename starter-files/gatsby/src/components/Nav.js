@@ -13,7 +13,7 @@ const NavStyles = styled.nav`
 
 export default function Nav() {
   return (
-    <NavStyles data-sal="fade" data-sal-duration="800" data-sal-delay="400">
+    <NavStyles>
       <Link to="/">TOM RENARD</Link>
       <div className="menu">
         <Link to="/contact">CONTACT</Link>
