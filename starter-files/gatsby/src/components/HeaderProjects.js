@@ -5,7 +5,6 @@ import Icone from './Icone';
 
 const SectionHPStyles = styled.section`
   height: 100vh;
-  border: 2px solid red;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
