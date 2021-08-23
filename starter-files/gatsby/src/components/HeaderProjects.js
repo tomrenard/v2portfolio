@@ -4,12 +4,15 @@ import { GiBeveledStar } from 'react-icons/gi';
 
 const SectionHPStyles = styled.section`
   height: 100vh;
+  border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   .intro-content-container {
     display: flex;
     justify-content: center;
   }
   .intro-content {
-    margin: 4rem 2rem;
     max-width: 500px;
     p {
       text-transform: uppercase;
@@ -19,7 +22,6 @@ const SectionHPStyles = styled.section`
 
 const TitleProjectsStyles = styled.div`
   .port-cont {
-    margin-top: 10rem;
     max-width: 100%;
     overflow: hidden;
   }
@@ -66,6 +68,7 @@ export default function HeaderProjects({ info }) {
           <p data-sal="fade" data-sal-duration="800" data-sal-delay="900">
             {info.headercontent}
           </p>
+          <p>{info.stack}</p>
         </div>
       </div>
     </SectionHPStyles>

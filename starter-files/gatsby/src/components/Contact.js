@@ -7,13 +7,12 @@ const SectionContactStyles = styled.section`
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   .contact-container {
     display: flex;
     justify-content: center;
   }
   .contact-content {
-    margin: 4rem 2rem;
     max-width: 500px;
     p {
       text-transform: uppercase;
@@ -23,7 +22,6 @@ const SectionContactStyles = styled.section`
 
 const TitleContactStyles = styled.div`
   .title-cont {
-    margin-top: 10rem;
     max-width: 100%;
     overflow: hidden;
   }
@@ -48,33 +46,47 @@ const TitleContactStyles = styled.div`
 
 export default function Contact() {
   return (
-    <SectionContactStyles>
-      <div
-        style={{ display: 'flex', justifyContent: 'center', marginTop: '4rem' }}
-      >
-        <GiBeveledStar
+    <>
+      <SectionContactStyles>
+        <div
           style={{
-            fontSize: '3rem',
+            display: 'flex',
+            justifyContent: 'center',
+            marginTop: '4rem',
           }}
-        />
-      </div>
-      <TitleContactStyles>
-        <div className="title-cont">
-          <div className="scroll2">
-            <h1>REACH OUT</h1>
+        >
+          <GiBeveledStar
+            style={{
+              fontSize: '3rem',
+            }}
+          />
+        </div>
+        <TitleContactStyles>
+          <div className="title-cont">
+            <div className="scroll2">
+              <h1>REACH OUT</h1>
+            </div>
+          </div>
+        </TitleContactStyles>
+        <div className="contact-container">
+          <div className="contact-content">
+            <p data-sal="fade" data-sal-duration="800" data-sal-delay="900">
+              If you have a freelance project enquiry or if your company is
+              interested in my profile, feel free to send me an email -
+              <span style={{ textTransform: 'lowercase' }}>
+                <a
+                  style={{ paddingLeft: '4px', fontWeight: 'bolder' }}
+                  href="mailto: tom.renard@zoho.com"
+                >
+                  tom.renard@zoho.com
+                </a>
+                .
+              </span>
+            </p>
           </div>
         </div>
-      </TitleContactStyles>
-      <div className="contact-container">
-        <div className="contact-content">
-          <p data-sal="fade" data-sal-duration="800" data-sal-delay="900">
-            If you have a general or project enquiry, please drop me an email -
-            available now.
-          </p>
-          <p>SEND AN EMAIL</p>
-        </div>
-      </div>
+      </SectionContactStyles>
       <Footer />
-    </SectionContactStyles>
+    </>
   );
 }

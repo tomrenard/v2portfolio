@@ -15,10 +15,10 @@ export default function NavFooter() {
     <>
       <FooterStyles>
         <div>
-          <p>GRADIENT MODE</p>
+          <p>ABOUT</p>
         </div>
         <div>
-          <p>SCROLL</p>
+          <p>PROJECTS</p>
         </div>
       </FooterStyles>
     </>

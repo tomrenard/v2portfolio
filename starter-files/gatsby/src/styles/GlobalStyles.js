@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
   :root {
-    --beige: #EFE5DF;
+    --beige: #fff8f5;
   }
   body {
     font-size: 1rem;
