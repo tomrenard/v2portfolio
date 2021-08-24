@@ -13,6 +13,9 @@ const SectionProjectStyles = styled.section`
     justify-content: start;
     @media (max-width: 900px) {
       align-items: center;
+      p {
+        font-size: 0.5rem;
+      }
     }
     h3 {
       text-transform: uppercase;

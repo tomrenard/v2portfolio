@@ -15,7 +15,7 @@ const SectionHeaderStyles = styled.header`
     justify-content: space-between;
   }
   @media (max-width: 400px) {
-    height: 92vh;
+    height: 86vh;
   }
 `;
 
