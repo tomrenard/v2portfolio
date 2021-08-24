@@ -30,7 +30,7 @@ const ProjectsStyles = styled.div`
 
 export default function Projects({ projects, scrollY }) {
   return (
-    <SectionProjectStyles>
+    <SectionProjectStyles className="proj">
       <Icone scrollY={scrollY} />
       <ProjectsStyles>
         <div>

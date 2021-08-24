@@ -17,7 +17,7 @@ export default function NavFooter() {
           </button>
         </div>
         <div>
-          <button type="button" onClick={() => scrollTo('.projects')}>
+          <button type="button" onClick={() => scrollTo('.proj')}>
             PROJECTS
           </button>
         </div>
