@@ -70,8 +70,8 @@ export default function Contact({ scrollY }) {
         <div className="contact-container">
           <div className="contact-content">
             <p>
-              If you have a freelance project enquiry or if your company is
-              interested in my profile, feel free to send me an email -
+              If you have a freelance project or if your company is interested
+              in my profile, feel free to send me an email -
               <span style={{ textTransform: 'lowercase' }}>
                 <a
                   style={{ paddingLeft: '4px', fontWeight: 'bolder' }}
