@@ -56,7 +56,7 @@ export default function Footer() {
           </ul>
         </div>
         <div>
-          <p>BUILT BY TOM RENARD &copy; {new Date().getFullYear()}</p>
+          <p>&copy; TOM RENARD {new Date().getFullYear()}</p>
         </div>
       </FooterStyles>
     </>

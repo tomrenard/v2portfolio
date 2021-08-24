@@ -27,7 +27,7 @@ export default function Index({ data }) {
       <>
         <Header />
         <HeaderProjects scrollY={scrollY} info={profilePic} />
-        <Projects projects={projects} />
+        <Projects scrollY={scrollY} projects={projects} />
         <Contact scrollY={scrollY} />
       </>
     </>

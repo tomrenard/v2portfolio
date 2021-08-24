@@ -1,45 +1,50 @@
 import React from 'react';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
+import Icone from './Icone';
 
 const SectionProjectStyles = styled.section`
   height: 100vh;
-  border: 2px solid yellow;
-`;
-
-const ProjectsStyles = styled.div`
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  .img-project-container {
-    width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  .projects {
+    display: flex;
+    justify-content: start;
+    h3 {
+      text-transform: uppercase;
+      padding-left: 1rem;
+      font-size: 7vw;
+    }
   }
 `;
 
-export default function Projects({ projects }) {
+const ProjectsStyles = styled.div`
+  display: flex;
+  justify-content: center;
+  .numbers {
+    display: flex;
+    align-items: flex-end;
+  }
+`;
+
+export default function Projects({ projects, scrollY }) {
   return (
-    <SectionProjectStyles className="projects">
-      <div>
-        {projects.nodes.map((project, i) => (
-          <ProjectsStyles key={`projects-${i}`}>
-            <div
-              data-sal="slide-right"
-              data-sal-duration="800"
-              data-sal-delay="800"
-              className="img-project-container"
-            >
-              <Img fluid={project.image.asset.fluid} alt={project.name} />
-            </div>
-            <div
-              data-sal="slide-left"
-              data-sal-duration="800"
-              data-sal-delay="800"
-            >
+    <SectionProjectStyles>
+      <Icone scrollY={scrollY} />
+      <ProjectsStyles>
+        <div>
+          {projects.nodes.map((project, i) => (
+            <div className="projects" key={`${i}-projects`}>
+              <div className="numbers">
+                <p>{`00${i + 1}`}</p>
+              </div>
               <h3>{project.name}</h3>
-              <p>{project.description}</p>
             </div>
-          </ProjectsStyles>
-        ))}
-      </div>
+          ))}
+        </div>
+      </ProjectsStyles>
+      <Icone scrollY={scrollY} />
     </SectionProjectStyles>
   );
 }

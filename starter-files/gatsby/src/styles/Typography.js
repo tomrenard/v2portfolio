@@ -27,7 +27,7 @@ const Typography = createGlobalStyle`
     text-decoration: none;
     text-decoration-skip-ink: none;
   }
-  h1, h2 {
+  h1, h2, h3 {
     font-family: 'Livia-Medium';
     font-weight: 100;
   }
