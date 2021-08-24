@@ -1,8 +1,12 @@
-import dotenv from 'dotenv';
+// import dotenv from 'dotenv';
 
-dotenv.config({ path: '.env' });
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
 
-export default {
+// dotenv.config({ path: '.env' });
+
+module.exports = {
   siteMetadata: {
     title: `Portfolio Tom Renard`,
     siteUrl: 'https://www.tomrenard.xyz',
