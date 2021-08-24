@@ -11,10 +11,21 @@ const SectionProjectStyles = styled.section`
   .projects {
     display: flex;
     justify-content: start;
+    @media (max-width: 900px) {
+      align-items: center;
+    }
     h3 {
       text-transform: uppercase;
       padding-left: 1rem;
       font-size: 7vw;
+      @media (max-width: 400px) {
+        font-size: 9vw;
+      }
+    }
+  }
+  @media (max-width: 400px) {
+    .none {
+      display: none;
     }
   }
 `;
@@ -31,7 +42,9 @@ const ProjectsStyles = styled.div`
 export default function Projects({ projects, scrollY }) {
   return (
     <SectionProjectStyles className="proj">
-      <Icone scrollY={scrollY} />
+      <div className="none">
+        <Icone scrollY={scrollY} />
+      </div>
       <ProjectsStyles>
         <div>
           {projects.nodes.map((project, i) => (
@@ -44,7 +57,9 @@ export default function Projects({ projects, scrollY }) {
           ))}
         </div>
       </ProjectsStyles>
-      <Icone scrollY={scrollY} />
+      <div className="none">
+        <Icone scrollY={scrollY} />
+      </div>
     </SectionProjectStyles>
   );
 }

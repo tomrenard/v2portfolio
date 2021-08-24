@@ -32,7 +32,7 @@ export default function Nav() {
   });
   return (
     <SectionStylesNav>
-      <NavStyles className={offset > 0 ? 'scrolled' : ''}>
+      <NavStyles className={offset > 100 ? 'scrolled' : ''}>
         <button type="button" onClick={() => scrollTo('.home')}>
           TOM RENARD
         </button>

@@ -14,6 +14,9 @@ const SectionHeaderStyles = styled.header`
     flex-direction: column;
     justify-content: space-between;
   }
+  @media (max-width: 400px) {
+    height: 92vh;
+  }
 `;
 
 const TitleHeaderStyles = styled.div`
@@ -33,11 +36,11 @@ const TitleHeaderStyles = styled.div`
   }
 `;
 
-export default function Header() {
+export default function Header({ scrollY }) {
   return (
     <SectionHeaderStyles className="home">
       <div className="header-container">
-        <Nav />
+        <Nav scrollY={scrollY} />
         <TitleHeaderStyles>
           <h1 data-sal="fade" data-sal-duration="800" data-sal-delay="800">
             <span>Front-End</span>

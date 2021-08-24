@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { GiBeveledStar, GiRobotAntennas } from 'react-icons/gi';
+import React from 'react';
+import { GiBeveledStar } from 'react-icons/gi';
 
 export default function Icone({ scrollY }) {
   return (

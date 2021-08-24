@@ -25,7 +25,7 @@ export default function Index({ data }) {
       <GlobalStyles />
       <Typography />
       <>
-        <Header />
+        <Header scrollY={scrollY} />
         <HeaderProjects scrollY={scrollY} info={profilePic} />
         <Projects scrollY={scrollY} projects={projects} />
         <Contact scrollY={scrollY} />
