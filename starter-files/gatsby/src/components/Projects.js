@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import Img from 'gatsby-image';
 import Icone from './Icone';
 
 const SectionProjectStyles = styled.section`
   height: 100vh;
   display: flex;
+  border: 2px solid red;
   align-items: center;
   justify-content: space-around;
   .projects {
@@ -28,15 +28,30 @@ const SectionProjectStyles = styled.section`
     }
   }
   @media (max-width: 400px) {
+    flex-direction: column;
+    justify-content: center;
     .none {
-      display: none;
+      margin: 6rem 0;
     }
   }
 `;
 
 const ProjectsStyles = styled.div`
+  .featured {
+    margin-bottom: 4rem;
+    p {
+      text-transform: lowercase;
+    }
+  }
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .list-container {
+    display: flex;
+    justify-content: center;
+    align-items: space-between;
+    flex-direction: column;
+  }
   .numbers {
     display: flex;
     align-items: flex-end;
@@ -50,7 +65,12 @@ export default function Projects({ projects, scrollY }) {
         <Icone scrollY={scrollY} />
       </div>
       <ProjectsStyles>
-        <div>
+        <div className="featured">
+          <p>
+            {`00${projects.nodes.length} / 00${projects.nodes.length} projects`}
+          </p>
+        </div>
+        <div className="list-container">
           {projects.nodes.map((project, i) => (
             <div className="projects" key={`${i}-projects`}>
               <div className="numbers">
