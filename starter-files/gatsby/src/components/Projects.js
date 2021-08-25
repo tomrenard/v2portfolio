@@ -1,3 +1,4 @@
+import { Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
 import Icone from './Icone';
@@ -78,7 +79,9 @@ export default function Projects({ projects, scrollY }) {
               <div className="numbers">
                 <p>{`00${i + 1}`}</p>
               </div>
-              <h3>{project.name}</h3>
+              <Link to={`project/${project.slug.current}`}>
+                <h3>{project.name}</h3>
+              </Link>
             </div>
           ))}
         </div>

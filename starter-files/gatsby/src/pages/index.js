@@ -39,6 +39,9 @@ export const query = graphql`
     projects: allSanityProject {
       nodes {
         name
+        slug {
+          current
+        }
         description
         image {
           asset {

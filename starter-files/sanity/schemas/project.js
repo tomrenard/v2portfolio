@@ -10,6 +10,15 @@ export default {
       description: 'Name of the project',
     },
     {
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
+      options: {
+        source: 'name',
+        maxLength: 100,
+      },
+    },
+    {
       name: 'image',
       title: 'Asset',
       type: 'image',
