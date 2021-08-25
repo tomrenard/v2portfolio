@@ -5,9 +5,11 @@ import Icone from './Icone';
 const SectionProjectStyles = styled.section`
   height: 100vh;
   display: flex;
-  border: 2px solid red;
   align-items: center;
   justify-content: space-around;
+  .none {
+    margin-top: 4rem;
+  }
   .projects {
     display: flex;
     justify-content: start;
