@@ -31,6 +31,10 @@ const Typography = createGlobalStyle`
     font-family: 'Livia-Medium';
     font-weight: 100;
   }
+
+  h1 {
+    font-size: 22vw;
+  }
 `;
 
 export default Typography;

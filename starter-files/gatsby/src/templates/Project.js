@@ -1,16 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { graphql } from 'gatsby';
-import styled from 'styled-components';
 import Nav from '../components/Nav';
 import Contact from '../components/Contact';
-
-const SectionProjectStyles = styled.section`
-  border: 2px solid red;
-`;
-
-const ProjectStyles = styled.div`
-  margin-top: 4rem;
-`;
+import SingleProjectHeader from '../components/SingleProjectHeader';
+import SingleProjectModule from '../components/SingleProjectModule';
+import SingleProjectModule2 from '../components/SingleProjectModule2';
+import SingleProjectModule3 from '../components/SingleProjectModule3';
 
 export default function SingleProjectPage({ data }) {
   const [scrollY, setScrollY] = useState(0);
@@ -26,13 +21,14 @@ export default function SingleProjectPage({ data }) {
   });
   const { project } = data;
   return (
-    <SectionProjectStyles>
+    <>
       <Nav />
-      <ProjectStyles>
-        <p>{project.name}</p>
-      </ProjectStyles>
+      <SingleProjectHeader project={project} />
+      <SingleProjectModule project={project} />
+      <SingleProjectModule2 project={project} />
+      <SingleProjectModule3 project={project} />
       <Contact scrollY={scrollY} />
-    </SectionProjectStyles>
+    </>
   );
 }
 
@@ -40,6 +36,14 @@ export const query = graphql`
   query ($slug: String!) {
     project: sanityProject(slug: { current: { eq: $slug } }) {
       name
+      description
+      image {
+        asset {
+          fluid(maxWidth: 2400) {
+            ...GatsbySanityImageFluid
+          }
+        }
+      }
     }
   }
 `;

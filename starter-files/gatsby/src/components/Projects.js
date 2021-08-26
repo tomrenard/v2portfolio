@@ -34,7 +34,7 @@ const SectionProjectStyles = styled.section`
     flex-direction: column;
     justify-content: center;
     .none {
-      margin: 6rem 0;
+      margin: 4rem 0;
     }
   }
 `;
