@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Footer from './Footer';
 import Icone from './Icone';
 
 const SectionContactStyles = styled.section`
@@ -85,7 +84,6 @@ export default function Contact({ scrollY }) {
           </div>
         </div>
       </SectionContactStyles>
-      <Footer />
     </>
   );
 }

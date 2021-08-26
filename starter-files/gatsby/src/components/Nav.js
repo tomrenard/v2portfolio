@@ -33,9 +33,9 @@ export default function Nav() {
   return (
     <SectionStylesNav>
       <NavStyles className={offset > 100 ? 'scrolled' : ''}>
-        <button type="button" onClick={() => scrollTo('.home')}>
+        <Link style={{ margin: '1rem' }} to="/">
           TOM RENARD
-        </button>
+        </Link>
         <div className="menu">
           <button type="button" onClick={() => scrollTo('.contact')}>
             CONTACT
