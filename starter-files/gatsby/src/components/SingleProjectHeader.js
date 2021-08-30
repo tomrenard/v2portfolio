@@ -12,6 +12,7 @@ const SectionSingleProjectHeaderStyles = styled.section`
 const ProjectStyles = styled.div`
   h1 {
     font-size: 20vw;
+    margin: 1rem;
     text-transform: uppercase;
   }
 `;
