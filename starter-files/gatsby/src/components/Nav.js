@@ -10,7 +10,7 @@ const SectionStylesNav = styled.section`
 
 const NavStyles = styled.nav`
   position: fixed;
-  height: 4rem;
+  height: 3rem;
   top: 0px;
   left: 0px;
   right: 0px;

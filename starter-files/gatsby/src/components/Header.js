@@ -22,7 +22,7 @@ const SectionHeaderStyles = styled.header`
 const TitleHeaderStyles = styled.div`
   display: flex;
   h1 {
-    font-size: 22vw;
+    font-size: 20vw;
     line-height: 0.7;
     font-weight: 100;
     margin: auto;
