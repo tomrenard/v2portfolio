@@ -26,7 +26,7 @@ export default function SingleProjectPage({ data }) {
       <SingleProjectHeader project={project} />
       <SingleProjectModule project={project} />
       <SingleProjectModule2 project={project} />
-      <SingleProjectModule3 project={project} />
+      {/* <SingleProjectModule3 project={project} /> */}
       <Contact scrollY={scrollY} />
     </>
   );
@@ -36,8 +36,26 @@ export const query = graphql`
   query ($slug: String!) {
     project: sanityProject(slug: { current: { eq: $slug } }) {
       name
+      host
+      stack
+      role
+      link
       description
       image {
+        asset {
+          fluid(maxWidth: 2400) {
+            ...GatsbySanityImageFluid
+          }
+        }
+      }
+      image2 {
+        asset {
+          fluid(maxWidth: 2400) {
+            ...GatsbySanityImageFluid
+          }
+        }
+      }
+      image3 {
         asset {
           fluid(maxWidth: 2400) {
             ...GatsbySanityImageFluid

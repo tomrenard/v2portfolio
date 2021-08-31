@@ -43,7 +43,24 @@ export const query = graphql`
           current
         }
         description
+        role
+        stack
+        host
         image {
+          asset {
+            fluid(maxWidth: 800) {
+              ...GatsbySanityImageFluid
+            }
+          }
+        }
+        image2 {
+          asset {
+            fluid(maxWidth: 800) {
+              ...GatsbySanityImageFluid
+            }
+          }
+        }
+        image3 {
           asset {
             fluid(maxWidth: 800) {
               ...GatsbySanityImageFluid

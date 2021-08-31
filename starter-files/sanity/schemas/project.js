@@ -10,6 +10,12 @@ export default {
       description: 'Name of the project',
     },
     {
+      name: 'link',
+      title: 'Project Link',
+      type: 'string',
+      description: 'Link of the project',
+    },
+    {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
