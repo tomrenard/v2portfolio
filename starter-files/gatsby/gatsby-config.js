@@ -10,7 +10,8 @@ module.exports = {
   siteMetadata: {
     title: `Tom Renard`,
     siteUrl: 'https://www.tomrenard.xyz',
-    description: 'Front-End Developer',
+    description:
+      'Based in Berlin for almost 3 years, I am building responsive and SEO-friendly templates, interfaces and web-apps. I create digital products aiming to deliver an optimized User Experience.',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
