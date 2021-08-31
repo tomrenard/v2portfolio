@@ -3,11 +3,17 @@ import styled from 'styled-components';
 
 const SingleProjectModule2Styles = styled.div`
   display: flex;
-  margin: 3rem;
-  justify-content: space-between;
+  max-width: 1200px;
+  margin: 3rem auto;
+  justify-content: space-around;
+  flex-wrap: wrap;
   align-items: center;
+  p {
+    margin: 1rem;
+  }
   .description-container {
     max-width: 400px;
+    min-width: 300px;
   }
 `;
 

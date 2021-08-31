@@ -31,5 +31,36 @@ export default {
       title: 'Project Description',
       type: 'text',
     },
+    {
+      name: 'role',
+      title: 'Project Role',
+      type: 'string',
+    },
+    {
+      name: 'stack',
+      title: 'Project Stack',
+      type: 'string',
+    },
+    {
+      name: 'host',
+      title: 'Project Host',
+      type: 'string',
+    },
+    {
+      name: 'image2',
+      title: 'Asset 2',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    },
+    {
+      name: 'image3',
+      title: 'Asset 3',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    },
   ],
 };
