@@ -4,6 +4,7 @@ import Contact from '../components/Contact';
 import Header from '../components/Header';
 import HeaderProjects from '../components/HeaderProjects';
 import Projects from '../components/Projects';
+import SEO from '../components/SEO';
 import GlobalStyles from '../styles/GlobalStyles';
 import Typography from '../styles/Typography';
 
@@ -22,6 +23,7 @@ export default function Index({ data }) {
   });
   return (
     <>
+      <SEO title="Front-End Developer" />
       <GlobalStyles />
       <Typography />
       <>

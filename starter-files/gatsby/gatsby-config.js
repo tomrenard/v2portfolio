@@ -8,14 +8,15 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: `Portfolio Tom Renard`,
+    title: `Tom Renard`,
     siteUrl: 'https://www.tomrenard.xyz',
-    description: 'Personal Portfolio',
+    description: 'Front-End Developer',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-smoothscroll',
+    'gatsby-plugin-helmet',
     {
       resolve: 'gatsby-source-sanity',
       options: {

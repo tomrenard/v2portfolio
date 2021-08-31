@@ -5,7 +5,8 @@ import Contact from '../components/Contact';
 import SingleProjectHeader from '../components/SingleProjectHeader';
 import SingleProjectModule from '../components/SingleProjectModule';
 import SingleProjectModule2 from '../components/SingleProjectModule2';
-import SingleProjectModule3 from '../components/SingleProjectModule3';
+import SEO from '../components/SEO';
+// import SingleProjectModule3 from '../components/SingleProjectModule3';
 
 export default function SingleProjectPage({ data }) {
   const [scrollY, setScrollY] = useState(0);
@@ -22,6 +23,7 @@ export default function SingleProjectPage({ data }) {
   const { project } = data;
   return (
     <>
+      <SEO title={project.name} />
       <Nav />
       <SingleProjectHeader project={project} />
       <SingleProjectModule project={project} />
