@@ -6,14 +6,17 @@ import { HiExternalLink } from 'react-icons/fa';
 const SingleProjectModuleStyles = styled.div`
   max-width: 1200px;
   margin: auto;
-  position: relative;
+  .container-h-img {
+    position: relative;
+    border: 6px solid black;
+  }
   .text-link {
     background: var(--beige);
     padding: 1rem;
     opacity: 0;
     position: absolute;
     top: 50%;
-    right: 38%;
+    right: 40%;
     z-index: 1000;
   }
   Img:hover {
@@ -32,8 +35,10 @@ export default function SingleProjectModule({ project }) {
   return (
     <SingleProjectModuleStyles>
       <a href={project.link} target="_blank" rel="noreferrer">
-        <p className="text-link">Click to visit the website</p>
-        <Img fluid={project.image.asset.fluid} alt={project.name} />
+        <div className="container-h-img">
+          <p className="text-link">Click to visit the website</p>
+          <Img fluid={project.image.asset.fluid} alt={project.name} />
+        </div>
       </a>
     </SingleProjectModuleStyles>
   );
