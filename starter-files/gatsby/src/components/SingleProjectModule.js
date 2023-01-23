@@ -32,14 +32,25 @@ const SingleProjectModuleStyles = styled.div`
 `;
 
 export default function SingleProjectModule({ project }) {
+  const isLink = project.link;
   return (
     <SingleProjectModuleStyles>
-      <a href={project.link} target="_blank" rel="noreferrer">
-        <div className="container-h-img">
-          <p className="text-link">Click to visit the website</p>
-          <Img fluid={project.image.asset.fluid} alt={project.name} />
-        </div>
-      </a>
+      {isLink ? (
+        <>
+          <a href={project.link} target="_blank" rel="noreferrer">
+            <div className="container-h-img">
+              <p className="text-link">Click to visit the website</p>
+              <Img fluid={project.image.asset.fluid} alt={project.name} />
+            </div>
+          </a>
+        </>
+      ) : (
+        <>
+          <div className="container-h-img">
+            <Img fluid={project.image.asset.fluid} alt={project.name} />
+          </div>
+        </>
+      )}
     </SingleProjectModuleStyles>
   );
 }

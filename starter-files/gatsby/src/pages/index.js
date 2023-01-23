@@ -41,6 +41,7 @@ export const query = graphql`
     projects: allSanityProject {
       nodes {
         name
+        index
         slug {
           current
         }

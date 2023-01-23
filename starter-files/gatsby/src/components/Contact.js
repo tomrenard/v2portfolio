@@ -16,9 +16,6 @@ const SectionContactStyles = styled.section`
   }
   .contact-content {
     max-width: 500px;
-    p {
-      text-transform: uppercase;
-    }
   }
 `;
 
@@ -69,8 +66,8 @@ export default function Contact({ scrollY }) {
         <div className="contact-container">
           <div className="contact-content">
             <p>
-              If you have a freelance project or if your company is interested
-              in my profile, feel free to send me an email -
+              If your company is interested in my profile, feel free to reach
+              out via email -
               <span style={{ textTransform: 'lowercase' }}>
                 <a
                   style={{ paddingLeft: '4px', fontWeight: 'bolder' }}

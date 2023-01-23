@@ -62,6 +62,7 @@ const ProjectsStyles = styled.div`
 `;
 
 export default function Projects({ projects, scrollY }) {
+  const itemsSorted = projects.nodes.sort((a, b) => a.index - b.index);
   return (
     <SectionProjectStyles className="proj">
       <div className="none">
@@ -74,15 +75,17 @@ export default function Projects({ projects, scrollY }) {
           </p>
         </div>
         <div className="list-container">
-          {projects.nodes.map((project, i) => (
-            <div className="projects" key={`${i}-projects`}>
-              <div className="numbers">
-                <p>{`00${i + 1}`}</p>
+          {itemsSorted.map((project, i) => (
+            <>
+              <div className="projects" key={`${i}-projects`}>
+                <div className="numbers">
+                  <p>{`00${i + 1}`}</p>
+                </div>
+                <Link to={`project/${project.slug.current}`}>
+                  <h3>{project.name}</h3>
+                </Link>
               </div>
-              <Link to={`project/${project.slug.current}`}>
-                <h3>{project.name}</h3>
-              </Link>
-            </div>
+            </>
           ))}
         </div>
       </ProjectsStyles>

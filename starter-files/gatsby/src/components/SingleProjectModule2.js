@@ -27,6 +27,7 @@ const SingleProjectModule2Styles = styled.div`
 `;
 
 export default function SingleProjectModule2({ project }) {
+  const isLink = project.link;
   return (
     <SingleProjectModule2Styles>
       <div className="letter-container">
@@ -41,13 +42,17 @@ export default function SingleProjectModule2({ project }) {
           <span>Stack:</span> {project.stack}
         </p>
         <p className="hosting">Hosted via {project.host}</p>
-        <p>
-          You can visit the website{' '}
-          <a href={project.link} target="_blank" rel="noreferrer">
-            here
-          </a>
-          .
-        </p>
+        {isLink && (
+          <>
+            <p>
+              You can visit the website{' '}
+              <a href={project.link} target="_blank" rel="noreferrer">
+                here
+              </a>
+              .
+            </p>
+          </>
+        )}
       </div>
     </SingleProjectModule2Styles>
   );

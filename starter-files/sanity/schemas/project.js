@@ -16,6 +16,12 @@ export default {
       description: 'Link of the project',
     },
     {
+      name: 'index',
+      title: 'Project Index',
+      type: 'number',
+      description: 'Index of the project',
+    },
+    {
       name: 'slug',
       title: 'Slug',
       type: 'slug',

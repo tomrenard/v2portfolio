@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import { GiBeveledStar } from 'react-icons/gi';
 import Icone from './Icone';
 
 const SectionHPStyles = styled.section`
@@ -17,9 +16,6 @@ const SectionHPStyles = styled.section`
   }
   .intro-content {
     max-width: 500px;
-    p {
-      text-transform: uppercase;
-    }
   }
 `;
 
